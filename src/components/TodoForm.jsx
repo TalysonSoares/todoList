@@ -7,7 +7,8 @@ const TodoForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if(!value || !category) return;
-        
+        setValue("")
+        setCategory("")
     }
   return (
     <div className="todo-form">
