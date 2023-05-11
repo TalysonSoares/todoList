@@ -32,6 +32,10 @@ function App() {
             <p>{todo.text}</p>
             <p className="category">({todo.category})</p>
           </div>
+          <div>
+            <button>Completar</button>
+            <button>Deletar</button>
+          </div>
         </div>
       ))}
     </div>
