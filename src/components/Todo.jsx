@@ -1,7 +1,15 @@
-import React from 'react'
+import {useState} from 'react'
 
 
 const Todo = ({ todo }) => {
+    const [value, setValue] = useState("");
+    const [category, setCategory] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Enviou formulario!")
+    }
+
   return (
     <div className="todo">
           <div className="content">
@@ -9,8 +17,8 @@ const Todo = ({ todo }) => {
             <p className="category">({todo.category})</p>
           </div>
           <div>
-            <button>Completar</button>
-            <button>X</button>
+            <button className="complete">Completar</button>
+            <button className="remove">X</button>
           </div>
     </div>
   )
