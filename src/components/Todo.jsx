@@ -2,13 +2,6 @@ import {useState} from 'react'
 
 
 const Todo = ({ todo }) => {
-    const [value, setValue] = useState("");
-    const [category, setCategory] = useState("");
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Enviou formulario!")
-    }
 
   return (
     <div className="todo">
