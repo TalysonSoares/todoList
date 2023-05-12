@@ -58,7 +58,7 @@ button:hover {
   background-color: #FFF;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  margin: 10px;
+  margin-bottom: 10px;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
@@ -83,4 +83,20 @@ input, select {
   border: 1px solid #ddd;
   border-radius: 3px;
   width: 100%;
+}
+
+.filter, .search {
+  border-bottom: 1px solid #555;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.filter-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.filter-options div {
+  flex: 1 1 0;
 }

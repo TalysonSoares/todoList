@@ -4,6 +4,7 @@ import Todo from './components/Todo'
 import TodoForm from './components/TodoForm';
 import Search from './components/Search';
 import "./App.css";
+import Filter from './components/Filter';
 
 
 function App() {
@@ -59,9 +60,10 @@ function App() {
   }
 
   return <div className="app">
+    <h1>Lista de Tarefas</h1>
+    <Search  search={search} setSearch={setSearch}/>
+    <Filter />
     <div className="todo-list">
-      <h1>Lista de Tarefas</h1>
-      <Search  search={search} setSearch={setSearch}/>
         {todos.filter((todo) => todo.text.toLocaleLowerCase().includes(search.toLocaleLowerCase())).map((todo) => (
           <Todo key={todo.id} todo={todo} removeTodo={removeTodo} completeTodo={completeTodo}/>
         ))}
