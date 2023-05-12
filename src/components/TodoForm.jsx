@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import { Form, Button, Alert } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const TodoForm = ({ addTodo }) => {
   const [value, setValue] = useState('');
@@ -40,7 +43,10 @@ const TodoForm = ({ addTodo }) => {
           <option value="Estudos">Estudos</option>
         </select>
         {formSubmitted && (
-          <p style={{ color: 'red' }}>Por favor, preencha todos os campos.</p>
+          <Alert variant="danger">Por favor, preencha todos os campos.</Alert>
+        )}
+        {!formSubmitted && (
+          <Alert variant="danger">Phehe</Alert>
         )}
         <button type="submit">Criar tarefa</button>
       </form>
