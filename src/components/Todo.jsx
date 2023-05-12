@@ -1,4 +1,7 @@
 import React from 'react'
+import { Button } from 'react-bootstrap';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const Todo = ({ todo, removeTodo, completeTodo }) => {
@@ -10,8 +13,8 @@ const Todo = ({ todo, removeTodo, completeTodo }) => {
             <p className="category">({todo.category})</p>
           </div>
           <div>
-            <button className="complete" onClick={() => completeTodo(todo.id)}>Completar</button>
-            <button className="remove" onClick={() => removeTodo(todo.id)}>X</button>
+            <Button variant='outline-success'  onClick={() => completeTodo(todo.id)}>Completar</Button>
+            <Button variant='outline-danger'  onClick={() => removeTodo(todo.id)}>Deletar</Button>
           </div>
     </div>
   )

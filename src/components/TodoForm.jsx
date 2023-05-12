@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -45,10 +46,7 @@ const TodoForm = ({ addTodo }) => {
         {formSubmitted && (
           <Alert variant="danger">Por favor, preencha todos os campos.</Alert>
         )}
-        {!formSubmitted && (
-          <Alert variant="danger">Phehe</Alert>
-        )}
-        <button type="submit">Criar tarefa</button>
+        <Button variant="outline-primary" className="btn-custom" type="submit">Criar tarefa</Button>
       </form>
     </div>
   );
