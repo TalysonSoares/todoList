@@ -65,17 +65,17 @@ button:hover {
   align-items: center;
 }
 
-.complete {
+/* .complete {
   background-color: #5cb85c;
 }
 
 .remove {
   background-color: #d0534f;
-}
+} */
 
-.todo-form {
+/* .todo-form {
   padding-bottom: 1.5rem;
-}
+} */
 
 input, select {
   padding: 5px;
@@ -111,5 +111,10 @@ input, select {
 .btn-custom:hover {
   background-color: #333974 !important;
   color: #efefef !important;
+}
+
+.modal-body {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
 }
 
